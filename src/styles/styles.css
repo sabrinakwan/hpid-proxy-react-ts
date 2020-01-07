@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@font-face {
+  font-family: 'HPSimplified';
+  src: url(./assets/fonts/HPSimplified_Lt.ttf) format('truetype');
+  src: url(./assets/fonts/HPSimplified_Rg.ttf) format('truetype');
+  /*src: url(./assets/fonts/HPSimplified_LtIt.ttf) format("truetype");
+    src: url(./assets/fonts/HPSimplified_RgIt.ttf) format("truetype");*/
+  font-weight: normal;
+}
+
+* {
+  font-family: 'HPSimplified', Arial;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.reset{
+  cursor: pointer;
+}
+
+.reset:active{
+  transform: scale(1.1);
+  box-shadow:5px 5px 5px grey;
+  border-radius:200px;
+}
+
+.reset:focus{
+  outline: none !important;
+}
+
+.bg-blue {
+  color: #ffffff;
+  background-color: #0096d6;
+}
+
+.matlistbox{
+  min-height: 130px;
+  max-height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+  border: 0.75px solid #dcdcdc;
+}
+.matbox {
+  /* min-height: 300px; */
+  /* max-height: 350px; */
+  margin-top: 12px;
+  margin-bottom: 10px;
+  overflow: auto;
+  border: 0.75px solid #dcdcdc;
+}
+
+.mat-accordion {
+  max-height: 250px;
+  overflow: auto;
+}
+
+.mat-expansion-panel-padding {
+  padding: 0px 10px 16px;
+}
+
+.mat-label-wrap {
+  overflow-wrap: break-word;
+}
+
+.remove-list-item {
+  cursor: pointer;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.icon-success {
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.icon-warning {
+  color: #856404;
+  border-color: #ffeeba;
+}
+
+.icon-danger {
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.mat-border{
+  height: auto; 
+  border-bottom: 1px solid #A7A6A5;
+}

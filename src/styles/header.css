@@ -1,0 +1,45 @@
+.toolbar {
+    height: 80px;
+    margin: -8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0096D6;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+margin: 0 16px;
+}
+
+.logo {
+    margin-left: 15px;
+    height: 34px;
+    max-height: 34px;
+    width: 244px;
+    background-image: url('./../assets/link-reveal-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 767px) {
+    .logo {
+        width: 189px;
+        max-height: 26px;
+        background-size: cover;
+        background-position: left center;
+    }
+}
+
+.toolbar .logo:hover {
+opacity: 0.8;
+}
+
+a {
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;  
+}
