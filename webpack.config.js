@@ -1,9 +1,10 @@
 const path = require('path');
+const fs = require("fs");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     // webpack will take the files from ./src/index
-    entry: './src/index',
+    entry: ['@babel/polyfill','./src/index'],
 
     // and output it into /dist as bundle.js
     output: {
@@ -49,5 +50,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         })
-    ]
+    ],
+    devServer: {
+        http2: true,
+        disableHostCheck: true,
+        https:true,
+        https: {
+            key: fs.readFileSync('./certs/selfsigned.key'),
+            cert: fs.readFileSync('./certs/selfsigned.crt'),
+            ca: fs.readFileSync('./certs/selfsigned-chain.pem'),
+        }
+    }
 };

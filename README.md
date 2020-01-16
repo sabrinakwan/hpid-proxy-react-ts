@@ -1,11 +1,14 @@
 # Project setup
 ## Commands used to set up this project
+https://medium.com/@dahvinchee/how-to-set-up-a-react-typescript-project-from-scratch-with-babel-and-webpack-6b069881229d
+
 ```
 npm init
 npm install webpack webpack-cli --save-dev
 npm install react react-dom --save
 npm install typescript --save-dev
 npm install @babel/core babel-loader @babel/preset-react @babel/preset-typescript @babel/preset-env @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread --save-dev
+npm install --save @babel/polyfill
 npm install css-loader style-loader --save-dev
 npm install html-webpack-plugin --save-dev
 npm install webpack-dev-server --save-dev
@@ -62,6 +65,7 @@ Add this section to the webpack.config.js
 Install this
 ```
 npm install --save @types/request
+npm install --save @types/request-promise-native
 ```
 1. UI Components: Move the HTML segment into the TSX files
 
