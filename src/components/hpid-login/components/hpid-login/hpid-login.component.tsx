@@ -23,10 +23,8 @@ export class HpidLoginComponent extends React.Component<HpidLoginComponentProps,
                     this.isLoggedIn = true;
                 }
     }
+    /*
     async componentDidMount() {
-        // const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=10`);
-        // const response = await fetchJsonp(proxyUrl);
-        // const json = await axios.jsonp(proxyUrl);
         const json = await HpidLoginProxyService.getProxyApiClient();
         console.log("this" + json);
         // const json = await response.json();
@@ -40,7 +38,25 @@ export class HpidLoginComponent extends React.Component<HpidLoginComponentProps,
         console.log(json);
         HpidLoginComponent.hpidProxy = json;
     }
+    */
 
+    componentDidMount() {
+        // subscribe to home component messages
+        this.subscription = messageService.getMessage().subscribe(message => {
+            if (message) {
+                // add message to local state if not empty
+                this.setState({ messages: [...this.state.messages, message] });
+            } else {
+                // clear messages when empty message received
+                this.setState({ messages: [] });
+            }
+        });
+    }
+
+    componentWillUnmount() {
+        // unsubscribe to ensure no memory leaks
+        this.subscription.unsubscribe();
+    }
     handleSignIn(e:any) {
     //    e.preventDefault();
         console.log('Sign In was clicked' + HpidLoginComponent.hpidProxy.sign_in_url);
